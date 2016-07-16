@@ -18,7 +18,6 @@ public static void main(String args[])
 		System.out.println("5 for getAllEmployee");
 		Scanner sc=new Scanner(System.in);
 		int i=sc.nextInt();
-		
 		switch(i){
 		case 1:
 			o1.AddEmployee();

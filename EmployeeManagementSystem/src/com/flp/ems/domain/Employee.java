@@ -50,9 +50,9 @@ public class Employee
 	{
 		return Dob;
 	}
-	public void getEmail()
+	public String getEmail()
 	{
-		this.Email=Email;
+		return Email;
 	}
 	public String setEmail(String Email)
 	{

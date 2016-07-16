@@ -1,35 +1,34 @@
 package com.flp.ems.service;
 import java.util.Map;
-import java.util.Map.Entry;
 import com.flp.ems.dao.EmployeeDaoImplForList;
 import com.flp.ems.domain.Employee;
 
 
 public class EmployeeServiceImpl implements IEmployeeService
 {
-	private int Eid;
-	private int Doj;
-	private int Dob;
-	private int Phn;
-	private int Name;
-	private int Add;
-	private int Email;
-	Employee o3=new Employee;
+	private String Doj;
+	private String Dob;
+	private String Phn;
+	private String Name;
+	private String Add;
+	EmployeeDaoImplForList o5=new EmployeeDaoImplForList();
 	@Override
-	public void AddEmployee (Map E) 
+	public void AddEmployee(Map E) 
 	{
-		Map<Integer,String>serv=E;
-		Name=serv.get(1);
-		Add=serv.get(2);
-		Phn=serv.get(3);
-		Doj=serv.get(4);
-		Dob=serv.get(5);
+		Employee o3=new Employee();
+		Map<Integer,String>s=E;
+		Name=s.get(1);
+		Add=s.get(2);
+		Phn=s.get(3);
+		Doj=s.get(4);
+		Dob=s.get(5);
 		o3.setName(Name);
+		o3.setName(Phn);
 		o3.setAdd(Add);
 		o3.setDoj(Doj);
 		o3.setDob(Dob);
-		EmployeeDaoImplForList E1=new EmployeeDaoImplForList;
-		E1=AddEmployee(o3);
+		EmployeeDaoImplForList E1=new EmployeeDaoImplForList();
+		E1.AddEmployee(o3);
 	}
 
 	@Override
@@ -51,9 +50,9 @@ public class EmployeeServiceImpl implements IEmployeeService
 	}
 
 	@Override
-	public void getAllEmployee() {
-		// TODO Auto-generated method stub
-		
+	public void getAllEmployee()
+	{
+		o5.getAllEmployee();
 	}
 
 }
